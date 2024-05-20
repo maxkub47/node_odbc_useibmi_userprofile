@@ -15,4 +15,12 @@ router.get('/query', controller.getVehicle)
 //test change library List 
 router.get('/chglibl', controller.chgLibl)
 
+//test change library List 
+router.get('/chglibl2', controller.chgLibl2)
+
+//test change library List 
+router.get('/maxlib1/chglibl', controller.chgLibl3)
+router.get('/maxlib2/chglibl', controller.chgLibl4)
+
+
 module.exports = router

@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000;
 app.use(json());
 app.use(cors());
 app.use(morgan("dev"));
-//app.use(jwt())
+app.use(jwt())
 app.use(session({secret: process.env.SES_SECRET, resave: true, saveUninitialized: true}))
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
@@ -42,8 +42,6 @@ app.use(errorHandler)
 
 
 //start NodeJS
-Database.connect(connectionString).then(() => {
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
   });
-});  
